@@ -46,8 +46,8 @@ def main():
         for link in pdf_links:
             downloadFile(link)
 
-    shutil.make_archive(ZIP_FILENAME, format='zip', root_dir='.', base_dir=FOLDER_NAME)
+    shutil.make_archive(ZIP_FILENAME, format='zip', root_dir=FOLDER_NAME, base_dir='.')
     shutil.rmtree('./PDF_Files')
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
