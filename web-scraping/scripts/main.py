@@ -39,7 +39,15 @@ def downloadFile(urlPdf):
         f'An error occurred: {e}'
 
 def main():
-    pass
+    pdf_links = fetchPdfLinks()
+    os.makedirs(FOLDER_NAME, exist_ok=True)
+
+    if pdf_links:
+        for link in pdf_links:
+            downloadFile(link)
+
+    shutil.make_archive(ZIP_FILENAME, format='zip', root_dir='.', base_dir=FOLDER_NAME)
+    shutil.rmtree('./PDF_Files')
 
 if __name__ == '__main__':
     main()
