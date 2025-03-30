@@ -25,3 +25,27 @@ def readPdf():
         return dfs
     except Exception as e:
         raise RuntimeError('Failure to reader PDF: {e}')
+
+def convertToCsv(dfs: List[df.DataFrame]):
+
+    OD = 'Seg. Odontológica'.upper()
+    AMB = 'Seg. Ambulatorial'.upper()
+    columns_map = {'OD': OD, 'AMB': AMB}
+
+    dfs_concatenado = df.concat(dfs, ignore_index=True)
+    dfs_concatenado.rename(columns=columns_map, inplace=True)
+    dfs_concatenado.drop(columns=['Unnamed: 0'], inplace=True)
+    dfs_concatenado.to_csv('output.csv', index=False)
+
+def main():
+    unzipFolder(FOLDER_PATH, PDF_NAME)
+    a = readPdf()
+    convertToCsv(a)
+    shutil.make_archive(format='zip', root_dir='.', base_dir='output.csv', base_name='Teste_Samuel_Deolino')
+    
+    files = [PDF_NAME, 'output.csv']
+    for remove in files:
+        os.remove(remove)
+
+if __name__ == "__main__":
+    main()
