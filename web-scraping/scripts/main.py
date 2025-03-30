@@ -25,3 +25,21 @@ def fetchPdfLinks():
     except Exception as f:
         print(f'Error fetching links: {f}')
 
+def downloadFile(urlPdf):
+    try:
+        response = requests.get(urlPdf)
+        response.raise_for_status()
+
+        fileName = os.path.join(FOLDER_NAME, os.path.basename(urlPdf))
+
+        with open(fileName, 'wb') as f:
+                f.write(response.content)
+
+    except Exception as e:
+        f'An error occurred: {e}'
+
+def main():
+    pass
+
+if __name__ == '__main__':
+    main()
