@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS active_health_plan_operators (
 );
 
 -- Inserting the data --
-LOAD DATA LOCAL INFILE '/home/samuel-deolino/Desktop/test-intuitive-care/database-testing/csv-active-operators-files/Relatorio_cadop.csv'
+LOAD DATA LOCAL INFILE '/home/samuel-deolino/Desktop/test-intuitive-care-main/database-testing/csv-active-operators-files/Relatorio_cadop.csv'
 INTO TABLE `active_health_plan_operators`
 FIELDS TERMINATED BY ';'
 ENCLOSED BY '"'
