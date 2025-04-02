@@ -29,4 +29,3 @@ FIELDS TERMINATED BY ';'
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS
-SET data_registro_ans = STR_TO_DATE(@data_registro_ans, '%Y-%m-%d');

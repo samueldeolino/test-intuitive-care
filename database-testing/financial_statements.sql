@@ -1,11 +1,11 @@
 -- Creating the table
 CREATE TABLE IF NOT EXISTS financial_statements (
-    DATA_REGISTRO DATE NOT NULL,
-    REG_ANS VARCHAR(20) NOT NULL,
-    CD_CONTA_CONTABIL VARCHAR(30) NOT NULL,
-    DESCRICAO VARCHAR(255) NOT NULL,
-    VL_SALDO_INICIAL DOUBLE(15,2),
-    VL_SALDO_FINAL DOUBLE(15,2)
+    data_registro DATE NOT NULL,
+    reg_ans VARCHAR(20) NOT NULL,
+    cd_conta_contabil VARCHAR(30) NOT NULL,
+    descricao VARCHAR(255) NOT NULL,
+    vl_saldo_inicial DOUBLE(15,2),
+    vl_saldo_final DOUBLE(15,2)
 );
 
 -- Inserting the data --
