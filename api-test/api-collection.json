@@ -1,0 +1,67 @@
+{
+  "info": {
+    "name": "FastAPI - Operadoras ANS",
+    "_postman_id": "12345678-1234-1234-1234-123456789abc",
+    "description": "Coleção de requisições para testar a API de operadoras da ANS.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Buscar operadora (termo + ordem)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/buscar/saude/crescente",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["buscar", "saude", "crescente"]
+        }
+      }
+    },
+    {
+      "name": "Buscar por CNPJ",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/cnpj/12345678000195",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["cnpj", "12345678000195"]
+        }
+      }
+    },
+    {
+      "name": "Buscar por Estado (UF)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/estado/SP",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["estado", "SP"]
+        }
+      }
+    },
+    {
+      "name": "Contar por Ano",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/ano/2020",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["ano", "2020"]
+        }
+      }
+    }
+  ]
+}
+
